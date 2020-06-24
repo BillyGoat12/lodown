@@ -27,9 +27,9 @@ module.exports.each = each;
 /**
  * identity: Returns the input value unaltered.
  * 
- * @param {Any Datatype} value: Any value, any datatype returned as itself.
+ * @param {*} value: Any value, any datatype returned as itself.
  * 
- * @return {Any Datatype}: Any value, any datatype as determined from our input 
+ * @return {*}: Any value, any datatype as determined from our input 
  * value.
  */
  
@@ -46,7 +46,7 @@ module.exports.identity = identity;
 /**
  * typeOf: Returns the type of a value as a string.
  * 
- * @param {Array, Number, Boolean, Undefined, String} value: Any value, any 
+ * @param {*} value: Any value, any 
  * datatype. 
  * 
  * @return {String}: returns a string with the datatype.
@@ -83,7 +83,7 @@ module.exports.identity = identity;
  * how many values to return from the beginning of the array.
  * @param {Number} number: number parameter takes the number and searches for 
  * that amount of items starting at the beginning of the array.
- * @return {Any Data type}: the number of the first element of the array.
+ * @return {Array}: the number of the first elements of the array.
  */
  
  function first(array, number) {
@@ -122,7 +122,7 @@ module.exports.first = first;
  * @param {Number} number: number parameter takes the number and searches for 
  * that amount of items starting at the end of the array.
  * 
- * @return {any value}: the number of the last element of the array.
+ * @return {Array}: the number of the last element of the array.
  */ 
  
 function last(array, number) {
@@ -155,8 +155,8 @@ module.exports.last = last;
  * 
  * @param {Array} array: takes an array and the index of the first 
  * string. 
- * @param {String} value: it takes an string value and it returns the first 
- * index of the string in the array.
+ * @param {*} value: it takes any value and it returns the first 
+ * index of the value in the array.
  * 
  * @return {Number}: Returns the index of the first string or -1 if the value 
  * is noy in the array.
@@ -180,7 +180,7 @@ module.exports.indexOf = indexOf;
  * true if the value is found.
  * 
  * @param {Array} array: Takes an array and search for the value. 
- * @param {Any Datatype} value: value that will return true if found.
+ * @param {*} value: value that will return true if found.
  * 
  * @returns {Boolean}: it returns a boolean if the value is in the array.
  */
@@ -328,7 +328,7 @@ module.exports.map = map;
  * pluck: It looks through an object to find if the property given is in the 
  * object. If the key is found, the values are pushed into an array.
  *
- * @param {Array with Objects} array: passes an array with object.
+ * @param {Array} array: passes an array made up of objects.
  * @param {String} key: passes a string of property key which returns 
  * an array containing the value of the keys.
  * 
@@ -437,11 +437,11 @@ module.exports.some = some;
  * 
  * @param {Array} array: Iterated through the array.
  * @param {Function} test: the function applies to each value in the array.
- * @param {Number, Array, Object or String} seed: previous result is equal to 
- * the seed. if holds a {} for object, a [] for array or a "" for string and a 
+ * @param {*} seed: previous result is equal to the seed which can be any datatype. if 
+ * holds a {} for object, a [] for array or a "" for string and a 
  * 0 for number. 
  * 
- * @return {Array}: Returns an array representing the last part of the function.
+ * @return {*}: Returns whatever value representing seed during the last interation of the function.
  * 
  */
  
